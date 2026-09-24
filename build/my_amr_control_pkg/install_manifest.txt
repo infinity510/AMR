@@ -1,3 +1,8 @@
+/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/hardware_interface_plugin.xml
+/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/lib/libmy_amr_control_pkg.so
+/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/config/controllers.yaml
+/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/launch/amr_bringup.launch.py
+/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/urdf/amr_robot.urdf.xacro
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/ament_index/resource_index/package_run_dependencies/my_amr_control_pkg
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/ament_index/resource_index/parent_prefix_path/my_amr_control_pkg
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/environment/ament_prefix_path.sh
@@ -10,6 +15,7 @@
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/local_setup.dsv
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/package.dsv
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/ament_index/resource_index/packages/my_amr_control_pkg
+/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/my_amr_control_pkg
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/cmake/my_amr_control_pkgConfig.cmake
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/cmake/my_amr_control_pkgConfig-version.cmake
 /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg/share/my_amr_control_pkg/package.xml

@@ -5,7 +5,7 @@ set(my_amr_control_pkg_BUILD_DEPENDS "rclcpp" "hardware_interface" "pluginlib" "
 set(my_amr_control_pkg_BUILDTOOL_DEPENDS "ament_cmake")
 set(my_amr_control_pkg_BUILD_EXPORT_DEPENDS "rclcpp" "hardware_interface" "pluginlib" "diff_drive_controller" "joint_state_broadcaster" "controller_manager")
 set(my_amr_control_pkg_BUILDTOOL_EXPORT_DEPENDS )
-set(my_amr_control_pkg_EXEC_DEPENDS "rclcpp" "hardware_interface" "pluginlib" "diff_drive_controller" "joint_state_broadcaster" "controller_manager")
+set(my_amr_control_pkg_EXEC_DEPENDS "xacro" "rclcpp" "hardware_interface" "pluginlib" "diff_drive_controller" "joint_state_broadcaster" "controller_manager")
 set(my_amr_control_pkg_TEST_DEPENDS "ament_lint_auto" "ament_lint_common")
 set(my_amr_control_pkg_GROUP_DEPENDS )
 set(my_amr_control_pkg_MEMBER_OF_GROUPS )

@@ -197,6 +197,43 @@ my_amr_control_pkg_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg_uninstall.dir/build.make CMakeFiles/my_amr_control_pkg_uninstall.dir/build
 .PHONY : my_amr_control_pkg_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named my_amr_control_pkg
+
+# Build rule for target.
+my_amr_control_pkg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_amr_control_pkg
+.PHONY : my_amr_control_pkg
+
+# fast build rule for target.
+my_amr_control_pkg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/build
+.PHONY : my_amr_control_pkg/fast
+
+src/my_hw_interface.o: src/my_hw_interface.cpp.o
+.PHONY : src/my_hw_interface.o
+
+# target to build an object file
+src/my_hw_interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/src/my_hw_interface.cpp.o
+.PHONY : src/my_hw_interface.cpp.o
+
+src/my_hw_interface.i: src/my_hw_interface.cpp.i
+.PHONY : src/my_hw_interface.i
+
+# target to preprocess a source file
+src/my_hw_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/src/my_hw_interface.cpp.i
+.PHONY : src/my_hw_interface.cpp.i
+
+src/my_hw_interface.s: src/my_hw_interface.cpp.s
+.PHONY : src/my_hw_interface.s
+
+# target to generate assembly for a file
+src/my_hw_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/src/my_hw_interface.cpp.s
+.PHONY : src/my_hw_interface.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... my_amr_control_pkg_uninstall"
 	@echo "... uninstall"
+	@echo "... my_amr_control_pkg"
+	@echo "... src/my_hw_interface.o"
+	@echo "... src/my_hw_interface.i"
+	@echo "... src/my_hw_interface.s"
 .PHONY : help
 
 

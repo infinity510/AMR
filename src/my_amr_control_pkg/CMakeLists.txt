@@ -42,8 +42,8 @@ install(TARGETS ${PROJECT_NAME}
   DESTINATION lib
 )
 
-# 6. Install the config and launch directories to the ROS 2 share destination
-install(DIRECTORY config launch
+# 6. Install the config, launch, and urdf directories to the ROS 2 share destination
+install(DIRECTORY config launch urdf
   DESTINATION share/${PROJECT_NAME}
 )
 

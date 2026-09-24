@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/my_amr_control_pkg.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen:
+codegen: CMakeFiles/my_amr_control_pkg.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -77,6 +77,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/my_amr_control_pkg_uninstall.dir/clean
+clean: CMakeFiles/my_amr_control_pkg.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -142,6 +143,38 @@ CMakeFiles/my_amr_control_pkg_uninstall.dir/codegen:
 CMakeFiles/my_amr_control_pkg_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg_uninstall.dir/build.make CMakeFiles/my_amr_control_pkg_uninstall.dir/clean
 .PHONY : CMakeFiles/my_amr_control_pkg_uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/my_amr_control_pkg.dir
+
+# All Build rule for target.
+CMakeFiles/my_amr_control_pkg.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/CMakeFiles --progress-num=1,2 "Built target my_amr_control_pkg"
+.PHONY : CMakeFiles/my_amr_control_pkg.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/my_amr_control_pkg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/my_amr_control_pkg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/CMakeFiles 0
+.PHONY : CMakeFiles/my_amr_control_pkg.dir/rule
+
+# Convenience name for target.
+my_amr_control_pkg: CMakeFiles/my_amr_control_pkg.dir/rule
+.PHONY : my_amr_control_pkg
+
+# codegen rule for target.
+CMakeFiles/my_amr_control_pkg.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/CMakeFiles --progress-num=1,2 "Finished codegen for target my_amr_control_pkg"
+.PHONY : CMakeFiles/my_amr_control_pkg.dir/codegen
+
+# clean rule for target.
+CMakeFiles/my_amr_control_pkg.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_amr_control_pkg.dir/build.make CMakeFiles/my_amr_control_pkg.dir/clean
+.PHONY : CMakeFiles/my_amr_control_pkg.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

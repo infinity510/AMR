@@ -4,6 +4,7 @@
 		"commands" : 
 		[
 			"install",
+			"pluginlib_export_plugin_description_file",
 			"ament_index_register_resource",
 			"ament_cmake_environment_generate_package_run_dependencies_marker",
 			"include",
@@ -17,201 +18,249 @@
 		],
 		"files" : 
 		[
+			"/home/akshat/micromamba/envs/ros_humble/share/pluginlib/cmake/pluginlib_export_plugin_description_file.cmake",
+			"CMakeLists.txt",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/index/ament_index_register_resource.cmake",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/environment/ament_cmake_environment_package_hook.cmake",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/core/ament_package.cmake",
-			"CMakeLists.txt",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/environment_hooks/ament_environment_hooks.cmake",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/environment_hooks/ament_cmake_environment_hooks_package_hook.cmake",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/environment_hooks/ament_generate_package_environment.cmake",
 			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/index/ament_index_register_package.cmake",
-			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/index/ament_cmake_index_package_hook.cmake"
+			"/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake/index/ament_cmake_index_package_hook.cmake",
+			"/home/akshat/micromamba/envs/ros_humble/share/pluginlib/cmake/pluginlib_package_hook.cmake"
 		],
 		"nodes" : 
 		[
 			{
-				"file" : 4
-			},
-			{
-				"command" : 5,
-				"file" : 4,
-				"line" : 29,
-				"parent" : 0
-			},
-			{
-				"command" : 4,
-				"file" : 3,
-				"line" : 66,
-				"parent" : 1
-			},
-			{
-				"command" : 3,
-				"file" : 2,
-				"line" : 48,
-				"parent" : 2
-			},
-			{
-				"file" : 1,
-				"parent" : 3
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 47,
-				"parent" : 4
+				"file" : 1
 			},
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 29,
-				"parent" : 5
+				"line" : 38,
+				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 105,
-				"parent" : 6
+				"line" : 89,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 46,
+				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 48,
-				"parent" : 4
+				"line" : 62,
+				"parent" : 0
 			},
 			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 43,
+				"command" : 5,
+				"file" : 5,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 48,
+				"parent" : 6
+			},
+			{
+				"file" : 3,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 47,
 				"parent" : 8
 			},
 			{
-				"command" : 0,
-				"file" : 0,
-				"line" : 105,
+				"command" : 2,
+				"file" : 3,
+				"line" : 29,
 				"parent" : 9
 			},
 			{
-				"command" : 3,
+				"command" : 0,
 				"file" : 2,
-				"line" : 48,
-				"parent" : 2
-			},
-			{
-				"file" : 6,
-				"parent" : 11
+				"line" : 105,
+				"parent" : 10
 			},
 			{
 				"command" : 7,
-				"file" : 6,
-				"line" : 20,
+				"file" : 3,
+				"line" : 48,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 43,
 				"parent" : 12
 			},
 			{
 				"command" : 0,
-				"file" : 5,
-				"line" : 70,
+				"file" : 2,
+				"line" : 105,
 				"parent" : 13
 			},
 			{
-				"command" : 0,
-				"file" : 5,
-				"line" : 87,
-				"parent" : 13
+				"command" : 4,
+				"file" : 4,
+				"line" : 48,
+				"parent" : 6
 			},
 			{
-				"command" : 0,
-				"file" : 5,
-				"line" : 70,
-				"parent" : 13
-			},
-			{
-				"command" : 0,
-				"file" : 5,
-				"line" : 87,
-				"parent" : 13
+				"file" : 7,
+				"parent" : 15
 			},
 			{
 				"command" : 8,
+				"file" : 7,
+				"line" : 20,
+				"parent" : 16
+			},
+			{
+				"command" : 0,
 				"file" : 6,
-				"line" : 26,
-				"parent" : 12
+				"line" : 70,
+				"parent" : 17
 			},
 			{
 				"command" : 0,
-				"file" : 7,
-				"line" : 91,
-				"parent" : 18
+				"file" : 6,
+				"line" : 87,
+				"parent" : 17
 			},
 			{
 				"command" : 0,
-				"file" : 7,
-				"line" : 91,
-				"parent" : 18
+				"file" : 6,
+				"line" : 70,
+				"parent" : 17
 			},
 			{
 				"command" : 0,
-				"file" : 7,
-				"line" : 91,
-				"parent" : 18
-			},
-			{
-				"command" : 0,
-				"file" : 7,
-				"line" : 107,
-				"parent" : 18
-			},
-			{
-				"command" : 0,
-				"file" : 7,
-				"line" : 119,
-				"parent" : 18
-			},
-			{
-				"command" : 3,
-				"file" : 2,
-				"line" : 48,
-				"parent" : 2
-			},
-			{
-				"file" : 9,
-				"parent" : 24
+				"file" : 6,
+				"line" : 87,
+				"parent" : 17
 			},
 			{
 				"command" : 9,
-				"file" : 9,
-				"line" : 16,
-				"parent" : 25
-			},
-			{
-				"command" : 1,
-				"file" : 8,
-				"line" : 29,
-				"parent" : 26
+				"file" : 7,
+				"line" : 26,
+				"parent" : 16
 			},
 			{
 				"command" : 0,
-				"file" : 0,
-				"line" : 105,
-				"parent" : 27
+				"file" : 8,
+				"line" : 91,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 8,
+				"line" : 91,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 8,
+				"line" : 91,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 8,
+				"line" : 107,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 8,
+				"line" : 119,
+				"parent" : 22
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 48,
+				"parent" : 6
+			},
+			{
+				"file" : 10,
+				"parent" : 28
 			},
 			{
 				"command" : 10,
-				"file" : 3,
+				"file" : 10,
+				"line" : 16,
+				"parent" : 29
+			},
+			{
+				"command" : 2,
+				"file" : 9,
+				"line" : 29,
+				"parent" : 30
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 105,
+				"parent" : 31
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 48,
+				"parent" : 6
+			},
+			{
+				"file" : 11,
+				"parent" : 33
+			},
+			{
+				"command" : 2,
+				"file" : 11,
+				"line" : 22,
+				"parent" : 34
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 105,
+				"parent" : 35
+			},
+			{
+				"command" : 11,
+				"file" : 5,
 				"line" : 68,
-				"parent" : 1
+				"parent" : 5
 			},
 			{
 				"command" : 0,
-				"file" : 3,
+				"file" : 5,
 				"line" : 150,
-				"parent" : 29
+				"parent" : 37
 			},
 			{
 				"command" : 0,
-				"file" : 3,
+				"file" : 5,
 				"line" : 157,
-				"parent" : 29
+				"parent" : 37
 			}
 		]
 	},
@@ -223,7 +272,52 @@
 	"installers" : 
 	[
 		{
-			"backtrace" : 7,
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/my_amr_control_pkg",
+			"paths" : 
+			[
+				"hardware_interface_plugin.xml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"libmy_amr_control_pkg.so"
+			],
+			"targetId" : "my_amr_control_pkg::@6890427a1f51a3e7e1df",
+			"targetIndex" : 0,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "my_amr_control_pkg::@6890427a1f51a3e7e1df",
+				"index" : 0
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "share/my_amr_control_pkg",
+			"paths" : 
+			[
+				"config",
+				"launch",
+				"urdf"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 11,
 			"component" : "Unspecified",
 			"destination" : "share/ament_index/resource_index/package_run_dependencies",
 			"paths" : 
@@ -233,7 +327,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 10,
+			"backtrace" : 14,
 			"component" : "Unspecified",
 			"destination" : "share/ament_index/resource_index/parent_prefix_path",
 			"paths" : 
@@ -243,7 +337,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 14,
+			"backtrace" : 18,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg/environment",
 			"paths" : 
@@ -253,7 +347,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 15,
+			"backtrace" : 19,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg/environment",
 			"paths" : 
@@ -263,7 +357,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 16,
+			"backtrace" : 20,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg/environment",
 			"paths" : 
@@ -273,7 +367,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 17,
+			"backtrace" : 21,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg/environment",
 			"paths" : 
@@ -283,7 +377,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 19,
+			"backtrace" : 23,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg",
 			"paths" : 
@@ -293,7 +387,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 20,
+			"backtrace" : 24,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg",
 			"paths" : 
@@ -303,7 +397,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 21,
+			"backtrace" : 25,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg",
 			"paths" : 
@@ -313,7 +407,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 22,
+			"backtrace" : 26,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg",
 			"paths" : 
@@ -323,7 +417,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 23,
+			"backtrace" : 27,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg",
 			"paths" : 
@@ -333,7 +427,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 28,
+			"backtrace" : 32,
 			"component" : "Unspecified",
 			"destination" : "share/ament_index/resource_index/packages",
 			"paths" : 
@@ -343,7 +437,17 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 30,
+			"backtrace" : 36,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/hardware_interface__pluginlib__plugin",
+			"paths" : 
+			[
+				"/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/my_amr_control_pkg"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 38,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg/cmake",
 			"paths" : 
@@ -354,7 +458,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 31,
+			"backtrace" : 39,
 			"component" : "Unspecified",
 			"destination" : "share/my_amr_control_pkg",
 			"paths" : 

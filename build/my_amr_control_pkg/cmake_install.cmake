@@ -43,6 +43,41 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_amr_control_pkg" TYPE FILE FILES "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/src/my_amr_control_pkg/hardware_interface_plugin.xml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmy_amr_control_pkg.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmy_amr_control_pkg.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmy_amr_control_pkg.so"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/libmy_amr_control_pkg.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmy_amr_control_pkg.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmy_amr_control_pkg.so")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/home/akshat/micromamba/envs/ros_humble/bin/x86_64-conda-linux-gnu-strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmy_amr_control_pkg.so")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/CMakeFiles/my_amr_control_pkg.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_amr_control_pkg" TYPE DIRECTORY FILES
+    "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/src/my_amr_control_pkg/config"
+    "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/src/my_amr_control_pkg/launch"
+    "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/src/my_amr_control_pkg/urdf"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_amr_control_pkg")
 endif()
 
@@ -88,6 +123,10 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/ament_cmake_index/share/ament_index/resource_index/packages/my_amr_control_pkg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/hardware_interface__pluginlib__plugin" TYPE FILE FILES "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/my_amr_control_pkg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

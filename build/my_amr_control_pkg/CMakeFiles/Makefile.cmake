@@ -1151,6 +1151,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_amr_control_pkg"
   "ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/my_amr_control_pkg"
   "ament_cmake_index/share/ament_index/resource_index/packages/my_amr_control_pkg"
+  "ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/my_amr_control_pkg"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -1158,4 +1159,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/my_amr_control_pkg_uninstall.dir/DependInfo.cmake"
+  "CMakeFiles/my_amr_control_pkg.dir/DependInfo.cmake"
   )

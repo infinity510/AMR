@@ -1717,7 +1717,7 @@
 					],
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-869c12da050ad4bf539d.json",
+					"jsonFile" : "directory-.-d6d50d58dd825520b3b8.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.15"
@@ -1727,7 +1727,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -1959,12 +1960,20 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "my_amr_control_pkg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_amr_control_pkg-361b9abb02e6c1e2cd8c.json",
+					"name" : "my_amr_control_pkg",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "my_amr_control_pkg_uninstall::@6890427a1f51a3e7e1df",
