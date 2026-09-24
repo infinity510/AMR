@@ -244,6 +244,9 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/eigen3/cmake
+
 //Path to a library.
 FastCDR_LIBRARY_DEBUG:FILEPATH=FastCDR_LIBRARY_DEBUG-NOTFOUND
 
@@ -281,13 +284,19 @@ SITE:STRING=akshat-IdeaPad
 TinyXML2_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/lib/cmake/tinyxml2
 
 //Path to a library.
-_lib:FILEPATH=/home/akshat/micromamba/envs/ros_humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/home/akshat/micromamba/envs/ros_humble/lib/libdiagnostic_msgs__rosidl_typesupport_fastrtps_cpp.so
+
+//The directory containing a CMake configuration file for action_msgs.
+action_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/action_msgs/cmake
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake/cmake
 
 //The directory containing a CMake configuration file for ament_cmake_core.
 ament_cmake_core_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_core/cmake
+
+//The directory containing a CMake configuration file for ament_cmake_cppcheck.
+ament_cmake_cppcheck_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_cppcheck/cmake
 
 //The directory containing a CMake configuration file for ament_cmake_export_definitions.
 ament_cmake_export_definitions_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_export_definitions/cmake
@@ -310,6 +319,9 @@ ament_cmake_export_link_flags_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/s
 //The directory containing a CMake configuration file for ament_cmake_export_targets.
 ament_cmake_export_targets_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_export_targets/cmake
 
+//The directory containing a CMake configuration file for ament_cmake_flake8.
+ament_cmake_flake8_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_flake8/cmake
+
 //The directory containing a CMake configuration file for ament_cmake_gen_version_h.
 ament_cmake_gen_version_h_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_gen_version_h/cmake
 
@@ -318,6 +330,12 @@ ament_cmake_include_directories_DIR:PATH=/home/akshat/micromamba/envs/ros_humble
 
 //The directory containing a CMake configuration file for ament_cmake_libraries.
 ament_cmake_libraries_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_libraries/cmake
+
+//The directory containing a CMake configuration file for ament_cmake_lint_cmake.
+ament_cmake_lint_cmake_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_lint_cmake/cmake
+
+//The directory containing a CMake configuration file for ament_cmake_pep257.
+ament_cmake_pep257_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_pep257/cmake
 
 //The directory containing a CMake configuration file for ament_cmake_python.
 ament_cmake_python_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_python/cmake
@@ -328,14 +346,71 @@ ament_cmake_target_dependencies_DIR:PATH=/home/akshat/micromamba/envs/ros_humble
 //The directory containing a CMake configuration file for ament_cmake_test.
 ament_cmake_test_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_test/cmake
 
+//The directory containing a CMake configuration file for ament_cmake_uncrustify.
+ament_cmake_uncrustify_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_uncrustify/cmake
+
 //The directory containing a CMake configuration file for ament_cmake_version.
 ament_cmake_version_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_version/cmake
+
+//The directory containing a CMake configuration file for ament_cmake_xmllint.
+ament_cmake_xmllint_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_cmake_xmllint/cmake
+
+//Path to a program.
+ament_cppcheck_BIN:FILEPATH=/home/akshat/micromamba/envs/ros_humble/bin/ament_cppcheck
+
+//Path to a program.
+ament_flake8_BIN:FILEPATH=/home/akshat/micromamba/envs/ros_humble/bin/ament_flake8
 
 //The directory containing a CMake configuration file for ament_index_cpp.
 ament_index_cpp_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_index_cpp/cmake
 
+//The directory containing a CMake configuration file for ament_lint_auto.
+ament_lint_auto_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_lint_auto/cmake
+
+//Path to a program.
+ament_lint_cmake_BIN:FILEPATH=/home/akshat/micromamba/envs/ros_humble/bin/ament_lint_cmake
+
+//The directory containing a CMake configuration file for ament_lint_common.
+ament_lint_common_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/ament_lint_common/cmake
+
+//Path to a program.
+ament_pep257_BIN:FILEPATH=/home/akshat/micromamba/envs/ros_humble/bin/ament_pep257
+
+//Path to a program.
+ament_uncrustify_BIN:FILEPATH=/home/akshat/micromamba/envs/ros_humble/bin/ament_uncrustify
+
+//Path to a program.
+ament_xmllint_BIN:FILEPATH=/home/akshat/micromamba/envs/ros_humble/bin/ament_xmllint
+
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/builtin_interfaces/cmake
+
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for console_bridge.
+console_bridge_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/lib/console_bridge/cmake
+
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/control_msgs/cmake
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/controller_interface/cmake
+
+//The directory containing a CMake configuration file for controller_manager.
+controller_manager_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/controller_manager/cmake
+
+//The directory containing a CMake configuration file for controller_manager_msgs.
+controller_manager_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/controller_manager_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/diagnostic_updater/cmake
+
+//The directory containing a CMake configuration file for diff_drive_controller.
+diff_drive_controller_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/diff_drive_controller/cmake
 
 //The directory containing a CMake configuration file for fastcdr.
 fastcdr_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/lib/cmake/fastcdr
@@ -352,14 +427,26 @@ fmt_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/lib/cmake/fmt
 //The directory containing a CMake configuration file for foonathan_memory.
 foonathan_memory_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/lib/foonathan_memory/cmake
 
+//The directory containing a CMake configuration file for generate_parameter_library.
+generate_parameter_library_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/generate_parameter_library/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/geometry_msgs/cmake
+
 //The directory containing a CMake configuration file for hardware_interface.
-hardware_interface_DIR:PATH=hardware_interface_DIR-NOTFOUND
+hardware_interface_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/hardware_interface/cmake
+
+//The directory containing a CMake configuration file for joint_state_broadcaster.
+joint_state_broadcaster_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/joint_state_broadcaster/cmake
 
 //The directory containing a CMake configuration file for libstatistics_collector.
 libstatistics_collector_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/libstatistics_collector/cmake
 
 //The directory containing a CMake configuration file for libyaml_vendor.
 libyaml_vendor_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/libyaml_vendor/cmake
+
+//The directory containing a CMake configuration file for lifecycle_msgs.
+lifecycle_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/lifecycle_msgs/cmake
 
 //Value Computed by CMake
 my_amr_control_pkg_BINARY_DIR:STATIC=/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg
@@ -370,6 +457,12 @@ my_amr_control_pkg_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 my_amr_control_pkg_SOURCE_DIR:STATIC=/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/src/my_amr_control_pkg
 
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/nav_msgs/cmake
+
+//The directory containing a CMake configuration file for parameter_traits.
+parameter_traits_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/parameter_traits/cmake
+
 //Path to a library.
 pkgcfg_lib_YAML_PKG_CONFIG_yaml:FILEPATH=/home/akshat/micromamba/envs/ros_humble/lib/libyaml.so
 
@@ -379,11 +472,20 @@ pkgcfg_lib__OPENSSL_crypto:FILEPATH=/home/akshat/micromamba/envs/ros_humble/lib/
 //Path to a library.
 pkgcfg_lib__OPENSSL_ssl:FILEPATH=/home/akshat/micromamba/envs/ros_humble/lib/libssl.so
 
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/pluginlib/cmake
+
 //The directory containing a CMake configuration file for rcl.
 rcl_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcl/cmake
 
+//The directory containing a CMake configuration file for rcl_action.
+rcl_action_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcl_action/cmake
+
 //The directory containing a CMake configuration file for rcl_interfaces.
 rcl_interfaces_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcl_interfaces/cmake
+
+//The directory containing a CMake configuration file for rcl_lifecycle.
+rcl_lifecycle_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcl_lifecycle/cmake
 
 //The directory containing a CMake configuration file for rcl_logging_interface.
 rcl_logging_interface_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcl_logging_interface/cmake
@@ -397,11 +499,23 @@ rcl_yaml_param_parser_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcl
 //The directory containing a CMake configuration file for rclcpp.
 rclcpp_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rclcpp/cmake
 
+//The directory containing a CMake configuration file for rclcpp_action.
+rclcpp_action_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rclcpp_action/cmake
+
+//The directory containing a CMake configuration file for rclcpp_lifecycle.
+rclcpp_lifecycle_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rclcpp_lifecycle/cmake
+
+//The directory containing a CMake configuration file for rclpy.
+rclpy_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rclpy/cmake
+
 //The directory containing a CMake configuration file for rcpputils.
 rcpputils_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcpputils/cmake
 
 //The directory containing a CMake configuration file for rcutils.
 rcutils_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rcutils/cmake
+
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/realtime_tools/cmake
 
 //The directory containing a CMake configuration file for rmw.
 rmw_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rmw/cmake
@@ -466,6 +580,12 @@ rosidl_typesupport_introspection_c_DIR:PATH=/home/akshat/micromamba/envs/ros_hum
 //The directory containing a CMake configuration file for rosidl_typesupport_introspection_cpp.
 rosidl_typesupport_introspection_cpp_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rosidl_typesupport_introspection_cpp/cmake
 
+//The directory containing a CMake configuration file for rsl.
+rsl_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/rsl/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/sensor_msgs/cmake
+
 //The directory containing a CMake configuration file for spdlog.
 spdlog_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/lib/cmake/spdlog
 
@@ -475,8 +595,35 @@ spdlog_vendor_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/spdlog_vend
 //The directory containing a CMake configuration file for statistics_msgs.
 statistics_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/statistics_msgs/cmake
 
+//The directory containing a CMake configuration file for std_msgs.
+std_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for tcb_span.
+tcb_span_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/tcb_span/cmake
+
+//The directory containing a CMake configuration file for tf2.
+tf2_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_msgs.
+tf2_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/tf2_msgs/cmake
+
+//The directory containing a CMake configuration file for tinyxml2_vendor.
+tinyxml2_vendor_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/tinyxml2_vendor/cmake
+
+//The directory containing a CMake configuration file for tl_expected.
+tl_expected_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/tl_expected/cmake
+
 //The directory containing a CMake configuration file for tracetools.
 tracetools_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/tracetools/cmake
+
+//The directory containing a CMake configuration file for trajectory_msgs.
+trajectory_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/trajectory_msgs/cmake
+
+//The directory containing a CMake configuration file for unique_identifier_msgs.
+unique_identifier_msgs_DIR:PATH=/home/akshat/micromamba/envs/ros_humble/share/unique_identifier_msgs/cmake
+
+//Path to a program.
+xmllint_BIN:FILEPATH=/home/akshat/micromamba/envs/ros_humble/bin/xmllint
 
 //The directory containing a CMake configuration file for yaml.
 yaml_DIR:PATH=yaml_DIR-NOTFOUND
