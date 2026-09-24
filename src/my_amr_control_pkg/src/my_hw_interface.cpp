@@ -25,12 +25,23 @@ namespace my_amr_control_pkg
         hw_states_position_.resize(info_.joints.size(), 0.0);
         hw_states_velocity_.resize(info_.joints.size(), 0.0);
 
-        // ESP32 micro-ROS ke sath communicate karne ke liye internal ROS 2 node banayein
+        // ESP32 micro-ROS ya external system se communicate karne ke liye internal ROS 2 node banayein
         hw_node_ = std::make_shared<rclcpp::Node>("amr_hw_bridge_node");
 
-        // Motor commands publish karne ke liye publisher banayein
-        esp32_publisher_ = hw_node_->create_publisher<std_msgs::msg::Float64MultiArray>(
-            "/motor_commands", 10);
+        // Left aur Right wheel velocities ke liye separate publishers banayein (in rad/s)
+        left_vel_pub_ = hw_node_->create_publisher<std_msgs::msg::Float64>("/left_vel", 10);
+        right_vel_pub_ = hw_node_->create_publisher<std_msgs::msg::Float64>("/right_vel", 10);
+
+        // Actual wheel feedback (rad/s) receive karne ke liye subscribers banayein
+        left_vel_sub_ = hw_node_->create_subscription<std_msgs::msg::Float64>(
+            "/left_feedback", 10, [this](const std_msgs::msg::Float64::SharedPtr msg) {
+                current_left_vel_ = msg->data;
+            });
+
+        right_vel_sub_ = hw_node_->create_subscription<std_msgs::msg::Float64>(
+            "/right_feedback", 10, [this](const std_msgs::msg::Float64::SharedPtr msg) {
+                current_right_vel_ = msg->data;
+            });
 
         return hardware_interface::CallbackReturn::SUCCESS;
     }
@@ -80,24 +91,30 @@ namespace my_amr_control_pkg
     hardware_interface::return_type MyAMRHardwareInterface::read(
         const rclcpp::Time & /*time*/, const rclcpp::Duration &period)
     {
-        // Temporary simulation feedback: velocity ko integrate karke position update karein
-        for (size_t i = 0; i < hw_commands_velocity_.size(); ++i)
-        {
-            hw_states_velocity_[i] = hw_commands_velocity_[i];
-            hw_states_position_[i] += hw_commands_velocity_[i] * period.seconds();
-        }
+        // Process incoming messages (updates current_left_vel_ and current_right_vel_)
+        rclcpp::spin_some(hw_node_);
+
+        // Actual hardware feedback se system memory (states) update karein
+        hw_states_velocity_[0] = current_left_vel_;
+        hw_states_position_[0] += current_left_vel_ * period.seconds();
+
+        hw_states_velocity_[1] = current_right_vel_;
+        hw_states_position_[1] += current_right_vel_ * period.seconds();
+
         return hardware_interface::return_type::OK;
     }
 
     hardware_interface::return_type MyAMRHardwareInterface::write(
         const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/)
     {
-        // diff_drive_controller se aayi wheel velocities ko ESP32 ke liye publish karein
-        std_msgs::msg::Float64MultiArray motor_msg;
-        motor_msg.data.push_back(hw_commands_velocity_[0]);
-        motor_msg.data.push_back(hw_commands_velocity_[1]);
+        // diff_drive_controller se aayi wheel velocities ko publish karein (in rad/s)
+        std_msgs::msg::Float64 left_msg;
+        left_msg.data = hw_commands_velocity_[0];
+        left_vel_pub_->publish(left_msg);
 
-        esp32_publisher_->publish(motor_msg);
+        std_msgs::msg::Float64 right_msg;
+        right_msg.data = hw_commands_velocity_[1];
+        right_vel_pub_->publish(right_msg);
 
         return hardware_interface::return_type::OK;
     }
