@@ -2,7 +2,7 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
-  set(install_space "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/install/my_amr_control_pkg")
+  set(install_space "/home/het/AMR/install/my_amr_control_pkg")
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -21,7 +21,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
   list(LENGTH files length)
   if(length EQUAL 0)
     message(STATUS "Uninstalling: ${path}/")
-    execute_process(COMMAND "/home/akshat/micromamba/envs/ros_humble/lib/python3.10/site-packages/cmake/data/bin/cmake" "-E" "remove_directory" "${path}")
+    execute_process(COMMAND "/usr/bin/cmake" "-E" "remove_directory" "${path}")
     # recursively try to remove parent directories
     get_filename_component(parent_path "${path}" PATH)
     ament_cmake_uninstall_target_remove_empty_directories("${parent_path}")
@@ -29,7 +29,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
-set(install_manifest "/mnt/Windows_SSD/Users/sheet/Desktop/AKSHAT/AMR/build/my_amr_control_pkg/install_manifest.txt")
+set(install_manifest "/home/het/AMR/build/my_amr_control_pkg/install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()
