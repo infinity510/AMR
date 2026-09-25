@@ -10,6 +10,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_lifecycle/state.hpp"
 #include "std_msgs/msg/float64.hpp"
+#include "sensor_msgs/msg/joint_state.hpp"
+
 
 namespace my_amr_control_pkg
 {
@@ -45,9 +47,10 @@ namespace my_amr_control_pkg
         rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr left_vel_pub_;
         rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr right_vel_pub_;
 
-        rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr left_vel_sub_;
-        rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr right_vel_sub_;
+        rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr telemetry_sub_;
 
+        double current_left_pos_ = 0.0;
+        double current_right_pos_ = 0.0;
         double current_left_vel_ = 0.0;
         double current_right_vel_ = 0.0;
     };

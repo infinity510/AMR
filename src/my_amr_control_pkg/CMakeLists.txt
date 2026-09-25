@@ -13,6 +13,7 @@ find_package(pluginlib REQUIRED)
 find_package(diff_drive_controller REQUIRED)
 find_package(joint_state_broadcaster REQUIRED)
 find_package(controller_manager REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 # 1. Compile the C++ hardware interface into a shared library
 add_library(${PROJECT_NAME} SHARED
@@ -31,6 +32,7 @@ ament_target_dependencies(${PROJECT_NAME}
   pluginlib
   diff_drive_controller
   joint_state_broadcaster
+  sensor_msgs
   controller_manager
 )
 

@@ -32,16 +32,22 @@ namespace my_amr_control_pkg
         left_vel_pub_ = hw_node_->create_publisher<std_msgs::msg::Float64>("/left_vel", 10);
         right_vel_pub_ = hw_node_->create_publisher<std_msgs::msg::Float64>("/right_vel", 10);
 
-        // Actual wheel feedback (rad/s) receive karne ke liye subscribers banayein
-        left_vel_sub_ = hw_node_->create_subscription<std_msgs::msg::Float64>(
-            "/left_feedback", 10, [this](const std_msgs::msg::Float64::SharedPtr msg) {
-                current_left_vel_ = msg->data;
+        // Subscribe to encoder telemetry
+        telemetry_sub_ = hw_node_->create_subscription<sensor_msgs::msg::JointState>(
+            "/encoder_telemetry", 10, [this](const sensor_msgs::msg::JointState::SharedPtr msg) {
+                // Loop through the names to find left and right wheels dynamically
+                for (size_t i = 0; i < msg->name.size(); ++i) {
+                    if (msg->name[i] == "left_wheel") {
+                        if (msg->position.size() > i) current_left_pos_ = msg->position[i];
+                        if (msg->velocity.size() > i) current_left_vel_ = msg->velocity[i];
+                    } else if (msg->name[i] == "right_wheel") {
+                        if (msg->position.size() > i) current_right_pos_ = msg->position[i];
+                        if (msg->velocity.size() > i) current_right_vel_ = msg->velocity[i];
+                    }
+                }
             });
 
-        right_vel_sub_ = hw_node_->create_subscription<std_msgs::msg::Float64>(
-            "/right_feedback", 10, [this](const std_msgs::msg::Float64::SharedPtr msg) {
-                current_right_vel_ = msg->data;
-            });
+
 
         return hardware_interface::CallbackReturn::SUCCESS;
     }
@@ -89,20 +95,21 @@ namespace my_amr_control_pkg
     }
 
     hardware_interface::return_type MyAMRHardwareInterface::read(
-        const rclcpp::Time & /*time*/, const rclcpp::Duration &period)
+    const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/)
     {
-        // Process incoming messages (updates current_left_vel_ and current_right_vel_)
+        // Process incoming messages (updates positions and velocities)
         rclcpp::spin_some(hw_node_);
 
-        // Actual hardware feedback se system memory (states) update karein
+        // Update system memory directly from hardware feedback
+        hw_states_position_[0] = current_left_pos_;
         hw_states_velocity_[0] = current_left_vel_;
-        hw_states_position_[0] += current_left_vel_ * period.seconds();
 
+        hw_states_position_[1] = current_right_pos_;
         hw_states_velocity_[1] = current_right_vel_;
-        hw_states_position_[1] += current_right_vel_ * period.seconds();
 
         return hardware_interface::return_type::OK;
     }
+
 
     hardware_interface::return_type MyAMRHardwareInterface::write(
         const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/)
