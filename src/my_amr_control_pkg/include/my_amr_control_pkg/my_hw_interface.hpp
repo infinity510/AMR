@@ -9,7 +9,7 @@
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_lifecycle/state.hpp"
-#include "std_msgs/msg/float64_multi_array.hpp"
+#include "std_msgs/msg/float64.hpp"
 
 namespace my_amr_control_pkg
 {
@@ -42,7 +42,14 @@ namespace my_amr_control_pkg
         std::vector<double> hw_states_velocity_;
 
         rclcpp::Node::SharedPtr hw_node_;
-        rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr esp32_publisher_;
+        rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr left_vel_pub_;
+        rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr right_vel_pub_;
+
+        rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr left_vel_sub_;
+        rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr right_vel_sub_;
+
+        double current_left_vel_ = 0.0;
+        double current_right_vel_ = 0.0;
     };
 
 } // namespace my_amr_control_pkg
