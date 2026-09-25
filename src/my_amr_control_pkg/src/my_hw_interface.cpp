@@ -34,7 +34,7 @@ namespace my_amr_control_pkg
 
         // Subscribe to encoder telemetry
         telemetry_sub_ = hw_node_->create_subscription<sensor_msgs::msg::JointState>(
-            "/encoder_telemetry", 10, [this](const sensor_msgs::msg::JointState::SharedPtr msg) {
+            "/encoder_telemetry", rclcpp::SensorDataQoS(), [this](const sensor_msgs::msg::JointState::SharedPtr msg) {
                 // Loop through the names to find left and right wheels dynamically
                 for (size_t i = 0; i < msg->name.size(); ++i) {
                     if (msg->name[i] == "left_wheel") {
